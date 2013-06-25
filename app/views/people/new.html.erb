@@ -1,2 +1,15 @@
-<h1>People#new</h1>
-<p>Find me in app/views/people/new.html.erb</p>
+<h1>Add Person</h1>
+<div class="row">
+  <div class="span6 offset3">
+  	<%= form_for(@person) do |f| %>
+
+  	  <%= f.label :name %>
+  	  <%= f.text_field :name %>
+
+  	  <%= f.label :email %>
+  	  <%= f.text_field :email %>
+
+  	  <%= f.submit "Add Person", class: "btn btn-large btn-primary" %>
+  	<% end %>
+  </div>
+</div>

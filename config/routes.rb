@@ -1,6 +1,4 @@
 Pairpal::Application.routes.draw do
-  get "people/new"
-
   resources :people
   
   root to: 'pages#home'
