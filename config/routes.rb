@@ -1,5 +1,7 @@
 Pairpal::Application.routes.draw do
+
   resources :people
+  resources :teams
   
   root to: 'pages#home'
   match '/newperson', to: 'people#new'
