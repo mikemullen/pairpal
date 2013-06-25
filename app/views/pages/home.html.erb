@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="center hero-unit">
+  <h1>Welcome to PairPal</h1>
+  <h2>What would you like to do today?</h2>
+  <ul>
+  	<li><%= link_to "Add a person",  newperson_path %></li>
+  	<li><%= link_to "Add a team",    '#' %></li>
+  	<li><%= link_to "View schedule", '#' %></li>
+  </ul>
+</div>

@@ -1,7 +1,11 @@
 Pairpal::Application.routes.draw do
-  get "pages/home"
+  get "people/new"
 
-  get "pages/about"
+  resources :people
+  
+  root to: 'pages#home'
+  match '/newperson', to: 'people#new'
+  match '/about', to: 'pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
