@@ -1,0 +1,7 @@
+<%= @team.name %><br />
+<h3>Team Members</h3><br />
+<% if @teammembers.any? %>
+  <% @teammembers.each do |t| %>
+  <%= t.name %> <br />
+  <% end %>
+<% end %><br />

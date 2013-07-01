@@ -1,0 +1,12 @@
+<h1>Assign to Team</h1>
+<%= form_for(@relationship) do |f| %>
+  <div>
+  	<%= f.label :person_id %>
+  	<%= select("relationship", "person_id", Person.all.collect {|p| [ p.name, p.id ]}, {prompt: 'Select Person'}) %>
+
+  	<%= f.label :team_id %>
+  	<%= select("relationship", "team_id", Team.all.collect {|t| [ t.name, t.id ]}, {prompt: 'Select Team'}) %>
+
+  </div>
+  <%= f.submit "Assign to Team", class: "btn btn-large btn-primary" %>
+<% end %>

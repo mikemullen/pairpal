@@ -3,7 +3,7 @@
 <ul class="people">
   <% @teams.each do |team| %>
     <li>
-      <%= team.name %>
+      <%= team.name %> <%= link_to "View", team_path(team) %>
     </li>
   <% end %>
 

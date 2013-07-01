@@ -1,9 +1,9 @@
 <h1>All People</h1>
 
 <ul class="people">
-  <% @people.each do |user| %>
+  <% @people.each do |person| %>
     <li>
-      <%= user.name %>, <%= user.email %>
+      <%= person.name %>, <%= person.email %> <%= link_to "View", person_path(person) %>
     </li>
   <% end %>
 

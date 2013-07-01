@@ -1,0 +1,10 @@
+<%= @person.id %>
+<%= form_for(@relationship) do |f| %>
+  <div>
+  	<%= select("person_id", "person", Person.all.collect {|p| [ p.name, p.id ]}, {prompt: 'Select Person'}) %>
+
+  	<%= select("team_id", "team", Team.all.collect {|t| [ t.name, t.id ]}, {prompt: 'Select Team'}) %>
+
+  </div>
+  <%= f.submit "Assign to Team", class: "btn btn-large btn-primary" %>
+<% end %>

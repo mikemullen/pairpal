@@ -1,1 +1,18 @@
-<%= @person.name %>, <%= @person.email %>
+<%= @person.name %>, <%= @person.email %> <br />Belongs to the following teams:<br />
+<% if @teams.any? %>
+  <% @teams.each do |t| %>
+  <%= t.name %> <br />
+  <% end %>
+<% end %><br />
+And has the following teammates:<br />
+<% if @finalteammates.any? %>
+  <% @finalteammates.each do |t| %>
+  <%= t.name %><br />
+  <% end %>
+<% end %>
+teamlist <%= @teamlist %><br />
+teammates <%= @teammates %> <br />
+teamliststring <%= @teamliststring %><br />
+teammatesfinal <%= @teammatesfinal %><br />
+teammatesfinalfinal <%= @teammatesfinalfinal %><br />
+finalteammates <%= @finalteammates %>
